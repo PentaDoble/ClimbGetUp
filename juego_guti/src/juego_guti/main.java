@@ -4,7 +4,6 @@ public class main {
 	public static void main(String[] args){
 		presentacion start = new presentacion();
 		start.introduccion();
-		menu ir = new menu();
-		ir.menus2();
+		menu.menus2();
 	}
 }
