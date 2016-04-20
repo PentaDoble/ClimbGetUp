@@ -42,12 +42,34 @@ public class escalar {
 			 			}
 			 				
 			 			else {
+			 				System.out.println("#te has agarrado mal en un saliente y te has caido#");
+			 				data.hp = data.hp-5;
+			 				System.out.println("Pierdes 5HP");
+			 			}
+			 			data.estadisticas();
+			 			data.espacios();
+			 		} while (roll1234 != Opusu);
+			 			roll567 = rGenerador.nextInt(7)+1; //4
+			 			do {
+			 				System.out.println("|-----------ok-----------------------|");
+			 				System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
+			 				System.out.println("|----------------------------------|");
+			 				System.out.println("Escoge un camino.");
+			 				Opusu = teclado.nextInt();
+			 			if (roll1234 == Opusu){
+			 					data.oro = data.oro + (32);
+			 				System.out.println("PASASTE DE NIVEl! has ganado 32 de oro!");
+			 					NumNVL++;
+			 			}
+			 				
+			 			else {
 			 				System.out.println("te has agarrado mal en un saliente y te has caido");
 			 				data.hp = data.hp-5;
 			 				System.out.println("Pierdes 5HP");
 			 			}
 			 			data.estadisticas();
-			 		} while (Cuenta.opcion == 1);
+			 			data.espacios();
+			 		} while (roll1234 != Opusu);
 			 		//System.out.println("◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
 			 		
 			 		//System.out.println("◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
