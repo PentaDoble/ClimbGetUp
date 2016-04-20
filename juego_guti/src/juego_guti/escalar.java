@@ -26,16 +26,28 @@ public class escalar {
 	public static void NumeroDos() {
 		teclado = new Scanner (System.in);
 		Random rGenerador = new Random(); 
-			 	do {
+			 NumNVL = 1;
+				do {
 			 		roll1234 = rGenerador.nextInt(7)+1; //4
 			 		do {
-			 		System.out.println("|------------------------------|");
-			 		System.out.println("-|"+NumNVL+"Nvl|-◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
-			 		System.out.println("|------------------------------|");
+			 		System.out.println("|----------------------------------|");
+			 		System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
+			 		System.out.println("|----------------------------------|");
 			 		System.out.println("Escoge un camino.");
 			 		Opusu = teclado.nextInt();
-			 		
-			 		} while ();
+			 			if (roll1234 == Opusu){
+			 					data.oro = data.oro + (32);
+			 				System.out.println("PASASTE DE NIVEl! has ganado 32 de oro!");
+			 					NumNVL++;
+			 			}
+			 				
+			 			else {
+			 				System.out.println("te has agarrado mal en un saliente y te has caido");
+			 				data.hp = data.hp-5;
+			 				System.out.println("Pierdes 5HP");
+			 			}
+			 			data.estadisticas();
+			 		} while (Cuenta.opcion == 1);
 			 		//System.out.println("◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
 			 		
 			 		//System.out.println("◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
