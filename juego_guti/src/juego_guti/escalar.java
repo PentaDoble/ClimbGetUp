@@ -26,7 +26,6 @@ public class escalar {
 	public static void NumeroDos() {
 		teclado = new Scanner (System.in);
 		Random rGenerador = new Random(); 
-		 if (Cuenta.opcion == 1) {
 			 	do {
 			 		roll1234 = rGenerador.nextInt(7)+1; //4
 			 		System.out.println("|------------------------------|");
