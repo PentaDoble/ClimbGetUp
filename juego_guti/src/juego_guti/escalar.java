@@ -28,12 +28,14 @@ public class escalar {
 		Random rGenerador = new Random(); 
 			 	do {
 			 		roll1234 = rGenerador.nextInt(7)+1; //4
+			 		do {
 			 		System.out.println("|------------------------------|");
 			 		System.out.println("-|"+NumNVL+"Nvl|-◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
 			 		System.out.println("|------------------------------|");
 			 		System.out.println("Escoge un camino.");
 			 		Opusu = teclado.nextInt();
 			 		
+			 		} while ();
 			 		//System.out.println("◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
 			 		
 			 		//System.out.println("◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
