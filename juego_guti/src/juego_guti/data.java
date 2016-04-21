@@ -20,6 +20,15 @@ public class data {
 		System.out.println("");
 		System.out.println("");
 	}
+		public static void espacios2(){
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+	}
 	public static void estadisticas(){
 		System.out.println("-------------------------------");
 		System.out.println("Estadisticas actuales " +data.hp+ "HP/" +data.hpmax+"HP --" +data.oro+" gold");
