@@ -63,11 +63,7 @@ public class menu {
 		}
 		}catch(Exception e){
 			System.out.println("Introduce un valor entre 0-4");
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e1) {
-				e1.printStackTrace();
-			}
+			data.espera();
 			menus2();
 		}
 		
