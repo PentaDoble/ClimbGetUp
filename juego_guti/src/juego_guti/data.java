@@ -34,4 +34,11 @@ public class data {
 		System.out.println("Estadisticas actuales " +data.hp+ "HP/" +data.hpmax+"HP --" +data.oro+" gold");
 		System.out.println("-------------------------------");
 	}
+	public static void espera(){
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+	}
 }
