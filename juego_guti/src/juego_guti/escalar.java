@@ -1,11 +1,11 @@
 import java.util.Scanner;
 import java.util.Random;
-public class escalar {
+public class NumeroDos {
 	 
 		public static Scanner teclado;
 		public static int rollNulo;
-		public static int roll1234;
-		public static int roll567;
+		public static int roll1234;// roll de los niveles  1 2 3 4
+		public static int roll567;// """""""""""""""""""""""
 		public static int roll8910;
 		public static int roll1112;
 		public static int roll1314;
@@ -18,14 +18,16 @@ public class escalar {
 		public static int cont1314;
 		public static int cont15;
 	//***************************************
-		public static int cont123p;
+		public static int cont123p;//contador de los niveles 1 2 3
 	//*****************************************
-		public static int NumNVL = 1;
+		public static int NumNVL; //numero de nivel.
 	//****************************************
-		 static int Opusu;
+		public static int Opusu;//opcion escogida por el usuario.
+
 	public static void NumeroDos() {
 		teclado = new Scanner (System.in);
 		Random rGenerador = new Random(); 
+		 if (Cuenta.opcion == 1) {
 			 NumNVL = 1;
 				do {
 			 		roll1234 = rGenerador.nextInt(7)+1; //4
@@ -49,7 +51,8 @@ public class escalar {
 			 			data.estadisticas();
 			 			data.espacios();
 			 		} while (roll1234 != Opusu);
-			 			roll567 = rGenerador.nextInt(7)+1; //4
+			 		Random rGenerador2 = new Random(); 
+			 			roll567 = rGenerador2.nextInt(7)+1; //4
 			 			do {
 			 				System.out.println("|-----------ok-----------------------|");
 			 				System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
