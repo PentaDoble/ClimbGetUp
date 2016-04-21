@@ -52,7 +52,7 @@ public class NumeroDos {
 			 			data.espacios();
 			 		} while (roll1234 != Opusu);
 			 		Random rGenerador2 = new Random(); 
-			 			roll567 = rGenerador2.nextInt(7)+1; //4
+			 			roll567 = rnd.setSeed(6); //4
 			 			do {
 			 				System.out.println("|-----------ok-----------------------|");
 			 				System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
@@ -63,6 +63,9 @@ public class NumeroDos {
 			 					data.oro = data.oro + (32);
 			 				System.out.println("PASASTE DE NIVEl! has ganado 32 de oro!");
 			 					NumNVL++;
+			 					 Random rnd = new Random();
+			 					 rnd.setSeed(6);
+			 					 
 			 			}
 			 				
 			 			else {
@@ -81,11 +84,7 @@ public class NumeroDos {
 			 	} while (cont1234 == 4);
 			//4 niveles de 7 subidas,
 			 //el mismo rango 7, necesito un contador de nivel.
-			 roll1234 = rGenerador.nextInt(7)+1; 
-			System.out.println("");
-			Cuenta.retirar = teclado.nextInt();
-			Cuenta.NumC = Cuenta.NumC - Cuenta.retirar;
-			System.out.println("");
+
 		}
 	}
 }
