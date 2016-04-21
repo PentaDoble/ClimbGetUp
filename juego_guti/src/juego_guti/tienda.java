@@ -10,7 +10,7 @@ public class tienda {
 		data.estadisticas();
 		System.out.println("-------------------------------");
 		System.out.println("1. Pociones");
-		System.out.println("2. Armaduras");
+		System.out.println("2. Armaduras. (Proximamente)");
 		System.out.println("0. Salir al menu");
 		System.out.println("-------------------------------");
 		shopgo();
@@ -19,24 +19,34 @@ public class tienda {
 		teclado2 = new Scanner(System.in);
 		try{
 			int select = teclado2.nextInt();
-			switch(select){
-			case 0:
-				menu.menus2();
-				break;
-			case 1:
-				pociones();
-				break;
-			case 2:
-				System.out.println("Ir a armaduras");
-				break; 
+			if(select <=2 && select >= 0){
+				switch(select){
+				case 0:
+					menu.menus2();
+					break;
+				case 1:
+					pociones();
+					break;
+				case 2:
+					System.out.println("No esta disponible actualmente.");
+					data.espera();
+					shopselect();
+					break; 
+				}
+			}else{
+				System.out.println("Introduce un numero valido.");
+				data.espera();
+				shopselect();
 			}
 		}catch(Exception e){
 			System.out.println("Introduce un numero");
+			data.espera();
 			shopselect();
 		}
 	}
 	public static void pociones(){
 		data.espacios();
+		data.estadisticas();
 		System.out.println("1. Elixir de Vida. Restaura 25HP. Precio: 25 gold");
 		System.out.println("2. Elixir de Vida Mayor. Restaura 50HP. Precio: 50 gold ");
 		System.out.println("3. Subir vida maxima. Sube 20HP. Precio: 1000 gold");
@@ -51,11 +61,74 @@ public class tienda {
 				shopselect();
 				break;
 			case 1:
-				if(data.oro>=25){
-					data.oro = data.oro - 25;
-					data.hp = data.hp + 25;
+				try{
+					if(data.hp >= data.hpmax){
+						System.out.println("Tienes la vida al maximo.");
+						data.espera();
+						pociones();
+					}
+					if(data.oro>=25){
+						data.oro = data.oro-25;
+						data.hp = data.hp + 25;
+						if(data.hp >= data.hpmax){
+							data.hp = data.hpmax;
+							pociones();
+						}
+						pociones();
+					}else{
+						System.out.println("No tienes dinero suficiente");
+						data.espera();
+						pociones();
+					}
+				}catch(Exception e){
+					System.out.println("Pon un valor correcto.");
+					data.espera();
+					pociones();
 				}
+				break;
+			case 2:
+				try{
+					if(data.hp >= data.hpmax){
+						System.out.println("Tienes la vida al maximo.");
+						data.espera();
+						pociones();
+					}
+					if(data.oro>=50){
+						data.oro = data.oro-50;
+						data.hp = data.hp + 50;
+						if(data.hp >= data.hpmax){
+							data.hp = data.hpmax;
+							pociones();
+						}
+						pociones();
+					}else{
+						System.out.println("No tienes dinero suficiente");
+						data.espera();
+						pociones();
+					}
+				}catch(Exception e){
+					System.out.println("Pon un valor correcto.");
+					data.espera();
+					pociones();
+				}
+				break;
+			case 3:
+				try{
+					if(data.oro>=1000){
+						data.hpmax = data.hpmax + 20;
+						data.oro = data.oro - 1000;
+						pociones();
+					}else{
+						System.out.println("No tienes dinero suficiente");
+						data.espera();
+						pociones();
+					}
+				}catch(Exception e){
+					System.out.println("Pon un valor correcto.");
+					data.espera();
+					pociones();
+				}
+				break;
 		}
 	}
 }
-
