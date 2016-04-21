@@ -2,9 +2,11 @@ package juego_guti;
 import java.util.*;
 
 public class menu {
+	private static Scanner teclado;
+	private static Scanner teclado2;
 	public static void menus2(){
-		Scanner teclado = new Scanner(System.in);
-		data llamada = new data();
+		teclado2 = new Scanner(System.in);
+		
 		data.espacios();
 		System.out.println("-------------------------------");
 		System.out.println("Bienvenido a Climbgetup -- Version " +data.version);
@@ -18,7 +20,7 @@ public class menu {
 		menus();
 	}
 	public static void menus(){
-		Scanner teclado = new Scanner(System.in);
+		teclado = new Scanner(System.in);
 		int seleccion;
 		try{
 		seleccion = teclado.nextInt();
@@ -39,13 +41,12 @@ public class menu {
 					break;
 				case 3:
 					//Llamada del metodo "shopselect" que se situa en tienda. shopselect hace la lista o el menu de la tienda
-					tienda iratienda = new tienda();
-					iratienda.shopselect();
+					tienda.shopselect();
 					//Fin de la llamada del metodo.
 					break;
 				case 4:
 					//Llamada del metodo "codigos" que se situa en data.
-					codigos llamada = new codigos();
+					codigos.codigoos();
 					//Fin de la llamada del metodo.
 					break;
 				}
