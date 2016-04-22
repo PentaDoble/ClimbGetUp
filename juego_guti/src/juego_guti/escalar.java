@@ -23,7 +23,6 @@ public class escalar {
 		public static int cont8910p = 0;
 		public static int cont1112p = 0;
 		public static int cont1314p = 0;
-		public static int cont15p = 0;
 	//*****************************************
 		public static int NumNVL; //numero de nivel.
 	//****************************************
@@ -35,32 +34,44 @@ public class escalar {
 		Random rGenerador = new Random(); 
 			 NumNVL = 1;
 //******************************************SIETEx4*******************************************************************
-				do {
+			 try{	
+			 do {
 			 		roll1234 = rGenerador.nextInt(7)+1; //4
 			 		do {
+			 			
 			 		System.out.println("|----------------------------------|");
 			 		System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
 			 		System.out.println("|----------------------------------|");
 			 		System.out.println("Escoge un camino.");
 			 		Opusu = teclado.nextInt();
+			 			
+							
 			 			if (roll1234 == Opusu){
 			 					data.oro = data.oro + (32);
 			 				System.out.println("PASASTE DE NIVEl! has ganado 32 de oro!");
 			 					NumNVL++;
 			 					cont1234p++;
 			 			}
-			 				
+			 
 			 			else {
 			 				System.out.println("#te has agarrado mal en un saliente y te has caido#");
 			 				data.hp = data.hp-5;
 			 				System.out.println("Pierdes 5HP");
 			 			}
+			 			if (data.hp <= 0){
+			 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+			 				data.espera();
+			 				menu.menus2();
+			 			}
 			 			data.estadisticas();
 			 			data.espacios2();
-			 		} while (roll1234 != Opusu);
+			 		} while (roll1234 != Opusu || roll1314 != 0);
 				} while (cont1234p != 4);
+	}catch(Exception e){
+		System.out.println("introduce un numero");
+		}
 //**********************************************SEISx3*************************************************************************
-			 	do{		
+			 do{		
 				rGenerador2 = new Random(); 
 			 			roll567 = rGenerador2.nextInt(6)+1; //4
 			 			do {
@@ -68,7 +79,9 @@ public class escalar {
 			 				System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.⇑.⇑.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
 			 				System.out.println("|----------------------------------|");
 			 				System.out.println("Escoge un camino.");
+			 				
 			 				Opusu = teclado.nextInt();
+			 			
 			 			if (roll567 == Opusu){
 			 					data.oro = data.oro + (35);
 			 				System.out.println("PASASTE DE NIVEl! has ganado 35 de oro!");
@@ -80,6 +93,11 @@ public class escalar {
 			 				System.out.println("te has agarrado mal en un saliente y te has caido");
 			 				data.hp = data.hp-5;
 			 				System.out.println("Pierdes 5HP");
+			 			}
+			 			if (data.hp <= 0){
+			 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+			 				data.espera();
+			 				menu.menus2();
 			 			}
 			 			data.estadisticas();
 			 			data.espacios2();
@@ -107,6 +125,11 @@ public class escalar {
 				 				data.hp = data.hp-5;
 				 				System.out.println("Pierdes 5HP");
 				 			}
+				 			if (data.hp <= 0){
+				 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+				 				data.espera();
+				 				menu.menus2();
+				 			}
 				 			data.estadisticas();
 				 			data.espacios2();
 				 		} while (roll8910 != Opusu);
@@ -133,6 +156,11 @@ public class escalar {
 				 				data.hp = data.hp-5;
 				 				System.out.println("Pierdes 5HP");
 				 			}
+				 			if (data.hp <= 0){
+				 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+				 				data.espera();
+				 				menu.menus2();
+				 			}
 				 			data.estadisticas();
 				 			data.espacios2();
 				 		} while (roll1112 != Opusu);
@@ -143,7 +171,7 @@ public class escalar {
 				 			roll1314 = rGenerador5.nextInt(3)+1; //4
 				 			do {
 				 				System.out.println("|-----------okdgvg----------hfg-------------|");
-				 				System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
+				 				System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
 				 				System.out.println("|----------------------------------|");
 				 				System.out.println("Escoge un camino.");
 				 				Opusu = teclado.nextInt();
@@ -159,23 +187,27 @@ public class escalar {
 				 				data.hp = data.hp-5;
 				 				System.out.println("Pierdes 5HP");
 				 			}
+				 			if (data.hp <= 0){
+				 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+				 				data.espera();
+				 				menu.menus2();
+				 			}
 				 			data.estadisticas();
 				 			data.espacios2();
 				 		} while (roll1314 != Opusu);
 				 	} while (cont1314p != 2);
-//********************************************DOSx1*********************************************************************************************
-			 	do{		
+//********************************************DOSx1*********************************************************************************************	
 					Random rGenerador6 = new Random(); 
 				 			roll15 = rGenerador6.nextInt(2)+1; //4
 				 			do {
 				 				System.out.println("|-----------okdgvg-----------------------|");
-				 				System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
+				 				System.out.println("-|Nvl("+NumNVL+")|-◘.⇑.⇑.◘-|Nvl("+NumNVL+")|-");
 				 				System.out.println("|----------------------------------|");
 				 				System.out.println("Escoge un camino.");
 				 				Opusu = teclado.nextInt();
 				 			if (roll15 == Opusu){
-				 					data.oro = data.oro + (60);
-				 				System.out.println("PASASTE DE NIVEl! has ganado 60 de oro!");
+				 					data.oro = data.oro + (400);
+				 				System.out.println("PASASTE DE NIVEl! has ganado 400 de oro, Por  llegar a lo mas alto");
 				 					NumNVL++;
 				 					cont1314p++;
 				 			}
@@ -185,10 +217,14 @@ public class escalar {
 				 				data.hp = data.hp-5;
 				 				System.out.println("Pierdes 5HP");
 				 			}
+				 			if (data.hp <= 0){
+				 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+				 				data.espera();
+				 				menu.menus2();
+				 			}
 				 			data.estadisticas();
 				 			data.espacios2();
 				 		} while (roll15 != Opusu);
-				 	} while (cont15p != 1);
 			 		//System.out.println("◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
 			 		
 			 		//System.out.println("◘.⇑.⇑.⇑.⇑.⇑.⇑.⇑.◘-|"+NumNVL+"Nvl|-");
