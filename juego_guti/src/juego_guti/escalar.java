@@ -29,12 +29,26 @@ public class escalar {
 		public static int Opusu;//opcion escogida por el usuario.
 	private static Random rGenerador2;
 
-	public static void NumeroDos() {
+	public static void escalo (){
+		try{	
+			escalar.siete();
+			escalar.seis();
+			escalar.cinco();
+			escalar.cuatro();
+			escalar.tres();
+			escalar.dos();
+		}catch(Exception ex){
+			System.out.println("introduce un numero");
+			data.espera();
+			escalo();
+		}
+	}
+//******************************************SIETEx4*******************************************************************
+	public static void siete() {	
 		teclado = new Scanner (System.in);
 		Random rGenerador = new Random(); 
 			 NumNVL = 1;
-//******************************************SIETEx4*******************************************************************
-			 try{	
+			// try{	
 			 do {
 			 		roll1234 = rGenerador.nextInt(7)+1; //4
 			 		do {
@@ -67,10 +81,14 @@ public class escalar {
 			 			data.espacios2();
 			 		} while (roll1234 != Opusu || roll1314 != 0);
 				} while (cont1234p != 4);
-	}catch(Exception e){
+	/**	}catch(Exception ex){
 		System.out.println("introduce un numero");
-		}
+		data.espera();
+		NumeroDos();
+		}**/
+	}
 //**********************************************SEISx3*************************************************************************
+			 public static void seis() {
 			 do{		
 				rGenerador2 = new Random(); 
 			 			roll567 = rGenerador2.nextInt(6)+1; //4
@@ -103,7 +121,9 @@ public class escalar {
 			 			data.espacios2();
 			 		} while (roll567 != Opusu);
 			 	} while (cont567p != 3);
+			 }
 //***************************************************CINCOx3*****************************************************************
+			 public static void cinco() {
 			 	do{		
 					Random rGenerador3 = new Random(); 
 				 			roll8910 = rGenerador3.nextInt(5)+1; //4
@@ -134,7 +154,9 @@ public class escalar {
 				 			data.espacios2();
 				 		} while (roll8910 != Opusu);
 				 	} while (cont8910p != 3);
+			 }
 //***************************************************CUATROx2*****************************************************************
+			 	public static void cuatro() {
 			 	do{		
 					Random rGenerador4 = new Random(); 
 				 			roll1112 = rGenerador4.nextInt(4)+1; //4
@@ -165,7 +187,9 @@ public class escalar {
 				 			data.espacios2();
 				 		} while (roll1112 != Opusu);
 				 	} while (cont1112p != 2);
+			 	}
 //****************************************************TRESx2************************************************************************************
+			 	public static void tres() {
 			 	do{		
 					Random rGenerador5 = new Random(); 
 				 			roll1314 = rGenerador5.nextInt(3)+1; //4
@@ -196,7 +220,9 @@ public class escalar {
 				 			data.espacios2();
 				 		} while (roll1314 != Opusu);
 				 	} while (cont1314p != 2);
+			 	}
 //********************************************DOSx1*********************************************************************************************	
+			 	public static void dos() {
 					Random rGenerador6 = new Random(); 
 				 			roll15 = rGenerador6.nextInt(2)+1; //4
 				 			do {
