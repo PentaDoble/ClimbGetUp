@@ -1,4 +1,5 @@
 package juego_guti;
+
 import java.util.*;
 
 public class menu {
@@ -32,6 +33,7 @@ public class menu {
 					System.exit(0);
 					break;
 				case 1:
+					escalar.NumeroDos();
 					/*Futuro metodo que ira al start.
 					escalar irastart = new escalar();
 					irastart.iniciodeljuego();*/
@@ -63,7 +65,11 @@ public class menu {
 		}
 		}catch(Exception e){
 			System.out.println("Introduce un valor entre 0-4");
-			data.espera();
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
 			menus2();
 		}
 		
