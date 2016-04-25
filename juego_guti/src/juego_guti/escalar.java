@@ -27,6 +27,7 @@ public class escalar {
 		public static int NumNVL; //numero de nivel.
 	//****************************************
 		public static int Opusu;//opcion escogida por el usuario.
+		
 	private static Random rGenerador2;
 
 	public static void escalo (){
@@ -38,11 +39,31 @@ public class escalar {
 			escalar.tres();
 			escalar.dos();
 		}catch(Exception ex){
-			System.out.println("introduce un numero");
-			data.espera();
-			escalo();
+			//System.out.println("introduce un numero,Se te devuelve la vida *-* y pierdes  16 de oro");
+			//data.hp = data.hp+5;
+			//data.oro = data.oro - (16);
+			if(NumNVL >=1 && NumNVL <= 4 ){
+				escalar.siete();
+				}
+			else if(NumNVL >=5 && NumNVL <= 7 ){
+				escalar.seis();
+				}
+			else if(NumNVL >=8 && NumNVL <= 10 ){
+				escalar.cinco();
+				}
+			else if(NumNVL >=11 && NumNVL <= 12 ){
+				escalar.cuatro();
+				}
+			else if(NumNVL >=13 && NumNVL <= 14 ){
+				escalar.tres();
+				}
+			else if(NumNVL == 15){
+				escalar.dos();
+				}
+			}
 		}
-	}
+		
+	
 //******************************************SIETEx4*******************************************************************
 	public static void siete() {	
 		teclado = new Scanner (System.in);
@@ -74,6 +95,7 @@ public class escalar {
 			 			}
 			 			if (data.hp <= 0){
 			 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+			 				data.estadisticas();
 			 				data.espera();
 			 				menu.menus2();
 			 			}
@@ -114,6 +136,7 @@ public class escalar {
 			 			}
 			 			if (data.hp <= 0){
 			 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+			 				data.estadisticas();
 			 				data.espera();
 			 				menu.menus2();
 			 			}
@@ -147,6 +170,7 @@ public class escalar {
 				 			}
 				 			if (data.hp <= 0){
 				 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+				 				data.estadisticas();
 				 				data.espera();
 				 				menu.menus2();
 				 			}
@@ -180,6 +204,7 @@ public class escalar {
 				 			}
 				 			if (data.hp <= 0){
 				 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+				 				data.estadisticas();
 				 				data.espera();
 				 				menu.menus2();
 				 			}
@@ -213,6 +238,7 @@ public class escalar {
 				 			}
 				 			if (data.hp <= 0){
 				 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+				 				data.estadisticas();
 				 				data.espera();
 				 				menu.menus2();
 				 			}
@@ -245,6 +271,7 @@ public class escalar {
 				 			}
 				 			if (data.hp <= 0){
 				 				System.out.println("Te has quedado sin vida,vuelve a intentarlo cuando te recuperes");
+				 				data.estadisticas();
 				 				data.espera();
 				 				menu.menus2();
 				 			}
