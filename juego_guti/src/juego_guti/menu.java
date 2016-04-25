@@ -33,7 +33,7 @@ public class menu {
 					System.exit(0);
 					break;
 				case 1:
-					escalar.NumeroDos();
+					escalar.escalo();
 					/*Futuro metodo que ira al start.
 					escalar irastart = new escalar();
 					irastart.iniciodeljuego();*/
