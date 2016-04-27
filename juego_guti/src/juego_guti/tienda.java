@@ -10,7 +10,7 @@ public class tienda {
 		data.estadisticas();
 		System.out.println("-------------------------------");
 		System.out.println("1. Pociones");
-		System.out.println("2. Armaduras. (Proximamente)");
+		System.out.println("2. Armaduras.");
 		System.out.println("0. Salir al menu");
 		System.out.println("-------------------------------");
 		shopgo();
