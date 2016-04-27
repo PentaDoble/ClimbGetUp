@@ -28,9 +28,7 @@ public class tienda {
 					pociones();
 					break;
 				case 2:
-					System.out.println("No esta disponible actualmente.");
-					data.espera();
-					shopselect();
+					armaduras();
 					break; 
 				}
 			}else{
@@ -127,6 +125,69 @@ public class tienda {
 					System.out.println("Pon un valor correcto.");
 					data.espera();
 					pociones();
+				}
+				break;
+		}
+	}
+	public static void armaduras(){
+		data.espacios();
+		data.estadisticas();
+		System.out.println("1. Reparar Armadura: Precio:100 gold");
+		System.out.println("2. Mejorar Armadura: Sube +3% Precio:250gold");
+		System.out.println("3. Cambiar de Armadura (Proximamente)");
+		System.out.println("0. Ir a la tienda");
+		armadurasselect();
+	}
+	public static void armadurasselect(){
+		teclado = new Scanner(System.in);
+		int select = teclado.nextInt();
+		switch(select){
+			case 0: 
+				shopselect();
+				break;
+			case 1:
+				try{
+					if(data.oro>=100){
+						data.armorhp = 100;
+						data.oro = data.oro - 100;
+						armaduras();
+					}else{
+						System.out.println("No tienes dinero suficiente");
+						data.espera();
+						armaduras();
+						}
+				}catch(Exception e){
+					System.out.println("Pon un valor correcto.");
+					data.espera();
+					armaduras();
+				}
+				break;
+			case 2:
+				try{
+					if(data.oro>=100){
+						data.armor = data.armor + 3;
+						data.oro = data.oro - 250;
+						armaduras();
+					}else{
+						System.out.println("No tienes dinero suficiente");
+						data.espera();
+						armaduras();
+					}
+				}catch(Exception e){
+					System.out.println("Pon un valor correcto.");
+					data.espera();
+					armaduras();
+				}
+				break;
+			case 3:
+				try{
+					System.out.println("No esta disponible actualmente.");
+					data.espera();
+					armaduras();
+				}catch(Exception e){
+					System.out.println("Pon un valor correcto.");
+					data.espera();
+					armaduras();
 				}
 				break;
 		}
