@@ -18,6 +18,7 @@ public class presentacion {
 			data.espera();
 		}else{
 			System.err.println("Error al iniciar Sesión");
+			System.out.println("Vuelve a Intentarlo");
 			introduccion();
 		}
 		
