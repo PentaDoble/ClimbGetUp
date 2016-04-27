@@ -1,7 +1,5 @@
 package juego_guti;
-
 import java.util.*;
-
 public class menu {
 	private static Scanner teclado;
 	private static Scanner teclado2;
@@ -12,10 +10,9 @@ public class menu {
 		System.out.println("-------------------------------");
 		System.out.println("Bienvenido a Climbgetup -- Version " +data.version);
 		System.out.println("-------------------------------");
-		System.out.println("1. Escalar");
-		System.out.println("2. Abrir Puertas (Proximamente)");
-		System.out.println("3. Tienda");
-		System.out.println("4. Codigo");
+		System.out.println("1. Juegos");
+		System.out.println("2. Tienda");
+		System.out.println("3. Codigo");
 		System.out.println("0. Exit");
 		System.out.println("-------------------------------");
 		menus();
@@ -33,20 +30,17 @@ public class menu {
 					System.exit(0);
 					break;
 				case 1:
-					escalar.escalo();
+					menu_juegos.menu_juego();
 					/*Futuro metodo que ira al start.
 					escalar irastart = new escalar();
 					irastart.iniciodeljuego();*/
 					break;
 				case 2:
-					// abrir puertas
-					break;
-				case 3:
 					//Llamada del metodo "shopselect" que se situa en tienda. shopselect hace la lista o el menu de la tienda
 					tienda.shopselect();
 					//Fin de la llamada del metodo.
 					break;
-				case 4:
+				case 3:
 					//Llamada del metodo "codigos" que se situa en data.
 					codigos.codigoos();
 					//Fin de la llamada del metodo.
@@ -75,3 +69,4 @@ public class menu {
 		
 	}
 }
+
